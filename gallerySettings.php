@@ -25,7 +25,7 @@ function changeGalleryField($field,$gallery_id){
 	if (!$field) {
 		trigger_error("Check get field_id", E_USER_ERROR);
 	}else{
-		$sql="UPDATE gallery_field FROM galleries WHERE gallery_id='$gallery_id'";
+		$sql="UPDATE galleries SET field_id='$field_id' WHERE gallery_id='$gallery_id'";
 		$result=$this->mysqli->query($sql);
 		if ($result) {
 			return true;
